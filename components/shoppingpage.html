@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dresses – Reivybe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white">
+    <!-- Navbar Component -->
+    <div id="navbar"></div>
+    <script>
+        fetch("components/navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+    <!-- Main Layout -->
+    <div class="flex mt-6 px-6">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="w-64 pr-6 border-r">
+            <p class="text-gray-600">Home / Women / <span class="font-semibold">Dresses</span></p>
+
+            <h2 class="font-bold text-xl mt-6">FILTERS</h2>
+
+            <div class="mt-4 text-red-500 font-semibold cursor-pointer">CLEAR ALL</div>
+
+            <details class="mt-4">
+                <summary class="font-semibold cursor-pointer">Size</summary>
+            </details>
+
+            <details class="mt-4">
+                <summary class="font-semibold cursor-pointer">Company / Brand</summary>
+            </details>
+
+            <details class="mt-4">
+                <summary class="font-semibold cursor-pointer">Color</summary>
+            </details>
+
+            <details class="mt-4">
+                <summary class="font-semibold cursor-pointer">Price Range</summary>
+            </details>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="grid grid-cols-3 gap-8 px-8 flex-1">
+
+            <!-- PRODUCT CARD TEMPLATE (copy it multiple times) -->
+            <div class="w-full">
+                <div class="relative bg-[#f1dada] rounded-xl overflow-hidden">
+                    <img src="images/dress1.png" alt="" class="w-full">
+
+                    <button class="absolute top-4 right-4 text-black text-xl">
+                        🤍
+                    </button>
+                </div>
+
+                <div class="bg-black bg-opacity-60 text-white p-4 rounded-b-xl">
+                    <h3 class="font-bold">Product name</h3>
+                    <p class="text-sm">Description</p>
+                    <p class="font-semibold mt-1">Price: 1700</p>
+
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-full">
+                        Buy On Amazon
+                    </button>
+                </div>
+            </div>
+
+            <!-- Duplicate the above card 8–12 times -->
+            <!-- CARD 2 -->
+            <div class="w-full">
+                <div class="relative bg-[#f1dada] rounded-xl overflow-hidden">
+                    <img src="images/dress2.png" alt="" class="w-full">
+                    <button class="absolute top-4 right-4 text-black text-xl">🤍</button>
+                </div>
+
+                <div class="bg-black bg-opacity-60 text-white p-4 rounded-b-xl">
+                    <h3 class="font-bold">Product name</h3>
+                    <p class="text-sm">Description</p>
+                    <p class="font-semibold mt-1">Price: 1700</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-full">
+                        Buy On Myntra
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="w-full">
+                <div class="relative bg-[#f1dada] rounded-xl overflow-hidden">
+                    <img src="images/dress2.png" alt="" class="w-full">
+                    <button class="absolute top-4 right-4 text-black text-xl">🤍</button>
+                </div>
+
+                <div class="bg-black bg-opacity-60 text-white p-4 rounded-b-xl">
+                    <h3 class="font-bold">Product name</h3>
+                    <p class="text-sm">Description</p>
+                    <p class="font-semibold mt-1">Price: 1700</p>
+                    <button class="mt-4 w-full bg-black text-white py-2 rounded-full">
+                        Buy On Myntra
+                    </button>
+                </div>
+            </div>
+
+            <!-- Copy more cards as needed -->
+
+        </div>
+
+    </div>
+
+</body>
+</html>

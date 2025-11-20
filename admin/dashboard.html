@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dashboard</title>
+</head>
+
+<body class="bg-gray-100 font-inter">
+
+  <!-- TOP NAVBAR -->
+  <nav class="w-full h-20 bg-[#383641] flex items-center justify-between px-6 text-white">
+    
+    <h1 class="text-4xl font-black">DASHBOARD</h1>
+
+    <!-- SEARCH BAR + BUTTON -->
+    <div class="flex items-center gap-2">
+      <div class="relative">
+        <span class="absolute left-3 top-2 text-gray-400">
+          🔍
+        </span>
+        <input 
+          type="text" 
+          placeholder="Search"
+          class="w-72 pl-10 pr-4 py-2 rounded-xl bg-gray-200 text-black/70 outline-none"
+        />
+      </div>
+
+      <button class="bg-blue-600 px-4 py-2 rounded-lg text-white hover:bg-blue-700">
+        Search
+      </button>
+    </div>
+
+    <div class="w-14 h-14 rounded-full bg-white"></div>
+  </nav>
+
+
+  <div class="flex">
+    <!-- LEFT SIDEBAR -->
+    <aside class="w-64 bg-gray-300 min-h-screen p-6 space-y-6">
+      <button class="w-full bg-blue-600 text-white py-2 rounded-full text-lg font-medium">
+        Add Product
+      </button>
+      <button class="w-full bg-blue-600 text-white py-2 rounded-full text-lg font-medium">
+        Categories
+      </button>
+      <button class="w-full bg-blue-600 text-white py-2 rounded-full text-lg font-medium">
+        Settings
+      </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 bg-gray-300 p-8">
+
+      <!-- Add product box -->
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <button class="bg-blue-600 text-white px-6 py-2 rounded-full mb-6">
+          Add Product
+        </button>
+
+        <div class="grid grid-cols-1 gap-5 w-3/4">
+          
+          <div>
+            <label class="font-semibold text-lg">Product Name</label>
+            <input type="text" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Category</label>
+            <select class="w-40 bg-gray-200 rounded p-2 mt-1">
+              <option>Select</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Subcategory 1</label>
+            <select class="w-40 bg-gray-200 rounded p-2 mt-1">
+              <option>Select</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Subcategory 2</label>
+            <select class="w-40 bg-gray-200 rounded p-2 mt-1">
+              <option>Select</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Description</label>
+            <input type="text" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Price</label>
+            <input type="number" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Image</label>
+            <div class="flex items-center gap-4 mt-1">
+              <input type="file" class="bg-gray-200 p-2 rounded w-1/2">
+              <button class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">
+                Upload
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Link</label>
+            <input type="text" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Color</label>
+            <input type="text" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Size</label>
+            <input type="text" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+          <div>
+            <label class="font-semibold text-lg">Company / Brand</label>
+            <input type="text" class="w-full bg-gray-200 rounded p-2 mt-1" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ALL PRODUCTS SECTION -->
+      <div class="mt-10">
+        <div class="bg-purple-200 py-4 px-6 text-3xl font-semibold">
+          ALL PRODUCTS
+        </div>
+
+        <div class="bg-gray-400 grid grid-cols-7 py-2 px-4 font-semibold">
+          <div>Image</div>
+          <div>Name</div>
+          <div>Category</div>
+          <div>Price</div>
+          <div>Status</div>
+          <div>Edit</div>
+          <div>Delete</div>
+        </div>
+
+        <!-- Row Example -->
+        <div class="grid grid-cols-7 py-4 px-4 border-b">
+          <div class="w-10 h-10 bg-black"></div>
+          <div>Product 1</div>
+          <div>Men</div>
+          <div>₹499</div>
+          <div>Active</div>
+          <div class="cursor-pointer text-blue-600">Edit</div>
+          <div class="cursor-pointer text-red-600">Delete</div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
+
